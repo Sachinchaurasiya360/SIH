@@ -254,7 +254,7 @@ class Face_Recognizer:
                             shape = predictor(img_rd, faces[i])
                             self.current_frame_face_feature_list.append(
                                 face_reco_model.compute_face_descriptor(img_rd, shape))
-                            self.current_frame_face_name_list.append("unknown")
+                            self.current_frame_face_name_list.append("Chal hat frame se tu kaon hai ")
 
                         # 6.2.2.1 Traversal all the faces in the database
                         for k in range(len(faces)):
@@ -299,7 +299,7 @@ class Face_Recognizer:
                                 print(nam)
                                 self.attendance(nam)
                             else:
-                                logging.debug("  Face recognition result: Unknown person")
+                                logging.debug("  Face recognition result:Chal hat chutiye frame se ")
 
                         # 7.  / Add note on cv2 window
                         self.draw_note(img_rd)
@@ -329,7 +329,7 @@ class Face_Recognizer:
 
 
 def main():
-    # logging.basicConfig(level=logging.DEBUG) # Set log level to 'logging.DEBUG' to print debug info of every frame
+    # logging.basicConfig(level=logging.DEBUG) # Set  level to 'logging.DEBUG' to print debug info of every frame
     logging.basicConfig(level=logging.INFO)
     Face_Recognizer_con = Face_Recognizer()
     Face_Recognizer_con.run()
